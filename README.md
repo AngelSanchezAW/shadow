@@ -11,7 +11,7 @@ angelsanchez@azulweb.net
 
 www.azulweb.net 
 
-<h2>Imagenes de la Platilla</h2>
+<h2>Imagenes de la Plantilla</h2>
 
 <div align=”center” width="100%">
 <h3>Vistra previa en dispositivos</h3>
