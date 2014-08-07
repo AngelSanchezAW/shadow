@@ -1,0 +1,397 @@
+/* Colocamos un margen y un padding de cero para todo el documento*/
+*{                               
+    margin: 0;
+    padding: 0;
+}
+
+/* Colocamos un fondo color claro, tipo de letra y tamaño*/
+body{
+    background: #F2F2F2;/*Color de fondo*/
+    font-family: 'Raleway', sans-serif;/*Tipo de letra, utilice google fonts*/
+    font-size: 16px;/*Tamaño de letra*/
+}
+
+/*Al header y al navegador le damos una propiedad de bloque*/
+header, nav{
+    display: block;/*Propiedad de bloque*/
+}
+
+/*Damos diseño al header, el header es el elemto que contiene el logo y el menu*/
+header{
+    background: #22282e;/*Color de fondo*/
+    box-shadow: 0px 10px 9px #888888;/*Efecto de sombra*/
+    height:60px;/*Alto del elemento*/   
+    margin: auto;/*Margen automatcio para que se centre el elemento*/
+    max-width:1030px;/*Colocamos un limite en el ancho del elemento*/
+    position: relative;/*Position en el estilo determina una posición para 
+    esa capa. Esta posición puede ser estática, absoluta o relativa*/
+    width: 80%;/*Colocamos en ancho del elemento en porcentaje, siempre será 
+    el 80% de la resolución de la pantalla, esto hace que se adapten a otros 
+    dispositivos como tabletas y móvil*/
+    z-index: 50;/*Esta propiedad de termina que el header ira arriba de todos 
+    los elementos, esto se utiliza de la siguiente forma, el z-index: 1; es el 
+    primer elemento, después sigue el z-index:2; este va arriba del elemento 1, 
+    después z-index: 3; este va arriba del 1 y del 2, nosotros colocamos el 50
+    por poner una cantidad mayor arriba de todos los posibles para que el menú móvil 
+    salga arriba de todo y no quede nada arriba que pueda estorbar su funcionamiento. */   
+}
+
+/*Los H1 son los titulos de cada pagina, aqui solo colocamos unos margen*/
+h1{
+    margin-left: 10px;/*Margen izquierdo de 10px*/
+    margin-top: 10px;/*Margen de la partde arriba de 10px*/
+}
+
+/*Los H2 son los subtitulos de cada pagina, aqui solo colocamos unos margen*/
+h2{
+    margin-left: 10px;/*Margen izquierdo de 10px*/
+    margin-top: 10px;/*Margen de la partde arriba de 10px*/
+}
+
+/*El footer es el pie de la pagina donde tenemos un logotipo y los datos del autor*/
+footer{
+    background: url(../img/fondofooter.png) no-repeat #22282e;/*En esta ocasión 
+    colocamos de fondo una imagen pequeña que muestra unas figuras, después de 
+    colocar la url de la imagen colocamos la propiedad   no-repeat para que no se 
+    repita y finalizamos con #22282e para darle un color de fondo, de esta forma 
+    tenemos una imagen que cubre solo una parte y el resto tiene un color*/
+    box-shadow: 0px 0px 15px #888888;/*Sombra del elemento*/
+    margin: auto;/*Margen automatcio para que se centre el elemento*/
+    max-width:1030px;/*Colocamos un limite en el ancho del elemento*/
+    height: 100px;/*Alto del elemento*/
+    width: 80%;/*Ancho del elemento*/
+}
+
+/*Los input son las cajas de texto del furmulario de utilizamos en la pagina de contacto*/
+input{
+    border-radius: 5px;/*Esta propiedad es para redondiar las esquinas*/
+    border-style: none;/*Quitamos los estilos de los bordes*/
+    box-shadow: 0px 0px 10px #888888;/*Colocamos una sombra a cada input*/
+    height: 30px;/*Alto del elemento*/    
+    width: 100%;/*Ancho del elemento*/
+}
+
+/*La textarea es el area de texto donde escribimos el mensaje a enviar en el formulario*/
+textarea{
+    border-radius: 5px;/*Esta propiedad es para redondiar las esquinas*/
+    border-style: none;/*Quitamos los estilos de los bordes*/
+    box-shadow: 0px 0px 10px #888888;/*Colocamos una sombra a cada input*/
+    width: 100%;/*Ancho del elemento*/
+}
+
+/*Dentro del formulario coloque etiquetas span para los iconos, cuando deseas darle estilo a un elemento
+dentro de otro elemento colocamos primero el primer elemento -from- pasamos espacio y colocamos en otro 
+elemento -span-, de esta forma solo le damos estilo a este elemento y no a todos los span*/
+form span{
+    opacity: .5;/*Con opacity le damos una transparencia*/
+}
+
+video{
+    width: 100%;
+}
+/*El submit es el id que se le coloco al boton de enviar del formulario*/
+#submit{
+    background: #000000;/*Color de fondo*/
+    box-shadow: 0px 0px 10px #888888;/*Sombre del elemento*/
+    color: #ffffff;/*Color de texto*/
+    width: 150px;/*Ancho del boton*/
+}
+
+/*Este es el mismo submit pero con la propiedad hover, esto se activa al pasar el puntero*/
+#submit:hover{
+    box-shadow: 0px 5px 10px #888888;/*Sombra del elemento*/
+
+ }
+
+/* El logo sera flotado a la izquierda */
+#logo{
+    background: url(../img/logo.png) no-repeat 0 0;/*En esta ocasión 
+    colocamos de fondo una imagen pequeña que muestra unas figuras, después de 
+    colocar la url de la imagen colocamos la propiedad   no-repeat para que no se 
+    repita y finalizamos con #22282e para darle un color de fondo, de esta forma 
+    tenemos una imagen que cubre solo una parte y el resto tiene un color*/
+    display: block;/*Propiedad de bloque*/
+    float: left;/*Propiedad para flotar un elemento a la izquierda*/
+    height: 44px;/*Alto del elemento*/   
+    margin: 6px 10px 0;/*Margen del logo*/
+    text-indent: -9999px;/*La propiedad text-indent especifica la sangría de la primera 
+    línea en un bloque de texto.*/
+    width: 200px;/*Ancho del elemento*/
+}
+
+/* Nuestro nav con id #menu lo flotaremos a la derecha*/
+#menu{
+    float: right;/*Propiedad para flotar un elemento a la derecha*/
+}   
+
+/* Quitamos estilos por defecto de el tag UL */
+#menu ul{
+    list-style: none;/* Quitamos estilos por defecto de el tag UL */
+}
+        
+/* Centramos y ponemos los textos en mayuscula */
+#menu li{
+   display: block;/*Propiedad de bloque*/
+   float: left;/*Propiedad para flotar un elemento a la izquierda*/
+   text-align: center;/*Alinear el texto al centro*/
+   text-transform: uppercase;/*Colocar en mayusculas*/
+}
+        
+/* Damos estilo a nuestros enlaces */
+#menu li a{
+    color: #fff;/*Color de texto*/
+    display: block;/*Propiedad de bloque*/
+    font-size: 13px;/*Tamaño de texto*/
+    height: 60px;/*Alto del elemento*/    
+    line-height: 60px;
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+
+#menu li a:hover{
+    background: #151a1e;
+    color: #2E9AFE;
+}
+
+/* Estilos #nav-mobile y lo ocultamos */
+#nav-mobile{
+    background: url(../img/nav.png) no-repeat center center;/*En esta ocasión 
+    colocamos de fondo una imagen pequeña que muestra unas figuras, después de 
+    colocar la url de la imagen colocamos la propiedad   no-repeat para que no se 
+    repita y finalizamos con #22282e para darle un color de fondo, de esta forma 
+    tenemos una imagen que cubre solo una parte y el resto tiene un color*/
+    display: none;/*Ocultamos el menu*/
+    float: right;/*Propiedad para que flote a la derecha*/
+    height: 60px;/*Alto del elemento*/    
+    opacity: .6;/*Colocamos transparencia*/
+    position: absolute;/*Position en el estilo determina una posición para 
+    esa capa. Esta posición puede ser estática, absoluta o relativa*/
+    right: 0;/*Esta propiedad right permite desplazar un elemento respecto a su posición 
+    original tomando como referencia el borde derecho del elemento*/
+    top:0;/*Esta propiedad top permite desplazar un elemento respecto a su posición 
+    original tomando como referencia el borde superior del elemento*/
+    width: 60px;/*Ancho del elemento*/
+}   
+/* Agregaremos esta clase a #nav-mobile, cuando el menu mobile haya sido desplegado */
+#nav-mobile.nav-active{
+    opacity: 1;
+}
+
+#asideredes{
+    background-color:rgba(0,0,0,0.9);
+    border-radius: 5px;
+    display: inline-block;
+    float: right;
+    margin-right: 10px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+
+#asideredes a{
+    color: #E6E6E6;
+    text-decoration: none;
+}
+
+
+#logopie{
+    background-color:rgba(0,0,0,0.9);
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+
+#sidebar{
+    display: inline-block;
+    float: right;
+    width: 26%;
+}
+
+
+#sidebar img{
+    opacity: 1;
+    width: 100%;
+    -webkit-transition:opacity .4s, width .4s;/*Efecto de transition compatible con Google Chrome 26.04.0 y Safari 6.13.1*/
+    -moz-transition:opacity .4s, width .4s;/*Efecto de transition compatible con Mozilla 16.04.0*/
+    -o-transition:opacity .4s, width .4s;/*Efecto de transition compatible con Opera 12.1.5*/
+    transition:opacity .4s, width .4s;/*Efecto de transition compatible con Internet Explorer 10.0*/
+}
+
+
+#sidebar img:hover{
+    opacity: .5;
+    width: 120%;
+}
+
+
+#contenido{
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    width: 70%; 
+}
+
+
+#contenido img{
+    margin-right: 10px;
+    width: 60%;
+    float: left;
+}
+
+.contenedor{
+    background:url(../img/pie.png) no-repeat #ffffff;/*En esta ocasión 
+    colocamos de fondo una imagen pequeña que muestra unas figuras, después de 
+    colocar la url de la imagen colocamos la propiedad   no-repeat para que no se 
+    repita y finalizamos con #22282e para darle un color de fondo, de esta forma 
+    tenemos una imagen que cubre solo una parte y el resto tiene un color*/
+    background-position:right bottom;
+    box-shadow: 0px 0px 15px #888888;
+    max-width:1030px;/*Colocamos un limite en el ancho del elemento*/
+    margin: auto;/*Margen automatcio para que se centre el elemento*/
+    width: 80%;
+}   
+
+.sectiontexto{
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 55%;
+}
+
+
+.sectiontexto2{
+    margin-bottom: 10px;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 10px;
+    width: 98%;
+}
+
+
+.sectiontexto a{
+   background: #000000;
+   border-radius: 5px; 
+   color: #ffffff;
+   padding: 10px;
+   text-decoration: none;
+}
+
+
+.sectiontexto a:hover{
+   box-shadow: 0px 5px 15px #888888;
+   opacity: .9;
+}
+
+.sectionvideo{
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-top: 10px;
+    vertical-align: top;
+    width: 40%;
+}
+
+.sectionvideo img{
+    width: 100%;
+}
+
+.main {
+    margin:20px auto;
+    max-width:1030px;/*Colocamos un limite en el ancho del elemento*/
+    width:80%;
+}
+
+ 
+.slides {
+    width:100%;
+}
+
+ 
+.slides img {
+    opacity: .7;
+    width:100%;
+    -webkit-transition:opacity .3s;/*Efecto de transition compatible con Google Chrome 26.04.0 y Safari 6.13.1*/
+    -moz-transition:opacity .3s;/*Efecto de transition compatible con Mozilla 16.04.0*/
+    -o-transition:opacity .3s;/*Efecto de transition compatible con Opera 12.1.5*/
+    transition:opacity .3s;/*Efecto de transition compatible con Internet Explorer 10.0*/   
+}
+
+
+.slides img:hover {
+    opacity: 5;
+}
+
+ 
+.slidesjs-container{
+    box-shadow: 0px 0px 15px #888888;
+    max-height: 319px;/*Alto del elemento*/
+    height: 319px;/*Alto del elemento*/  
+}
+
+
+.slidesjs-pagination {
+   display: none;
+}
+ 
+
+ 
+.slidesjs-navigation{
+    color:#000;
+    display:inline-block;
+    float:right;
+    font-size: 15px;
+    opacity: .4;
+    padding:5px;
+    text-decoration:none;
+    -webkit-transition:font-size .3s;/*Efecto de transition compatible con Google Chrome 26.04.0 y Safari 6.13.1*/
+    -moz-transition:font-size .3s;/*Efecto de transition compatible con Mozilla 16.04.0*/
+    -o-transition:font-size .3s;/*Efecto de transition compatible con Opera 12.1.5*/
+    transition:font-size .3s;/*Efecto de transition compatible con Internet Explorer 10.0*/   
+}
+
+
+.slidesjs-navigation:hover{
+    font-size: 25px;
+    opacity: 5;
+}
+
+.tituloslider{
+    position: relative; 
+    width: 100%;
+} 
+
+
+.tituloslider h2{
+    margin-left: 0;     
+    position: absolute; 
+    top: 40px;    
+    background: rgba(0, 0, 0, 0.9); 
+    background: rgb(0, 0, 0); 
+    color: white;
+    letter-spacing: -1px; 
+    padding: 10px;
+} 
+
+
+#demo{
+    width: 100%;
+    text-align: center;
+}
+
+#demo a{
+    padding: 15px;
+    padding-left: 30px;
+    margin-right: 30px;
+    background: #FE2E2E;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+#demo a:hover{
+    background: #FA5858;   
+}

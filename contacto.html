@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Shadow - Contacto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type='text/css' href="fonts/style.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/style-movil.css">
+    <link rel="shortcut icon" href="http://www.azulweb.net/wp-content/uploads/2014/02/icono-2.png" />
+    <!--Estilo para mostrar activado el menu segun en la apgina que estemos-->
+    <style>
+   #Contacto{
+                background: #151a1e;
+                color: #2E9AFE;
+                box-shadow: 0px 0px 5px #888888;
+            }
+    </style>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51ad47f56eea538f">
+    </script>
+</head>
+<body>
+<header>
+    <a href="index.html" id="logo">Logo</a>
+    <nav id="menu">
+        <a href="#" class="nav-mobile" id="nav-mobile"></a>
+        <ul>
+            <li><a href="index.html"><span class="icon-house"></span> Inicio</a></li>
+            <li><a href="azul-web.html"><span class="icon-network"></span> Azul Web</a></li>
+            <li><a href="contenido.html"><span class="icon-graduation"></span> Contenido</a></li>
+            <li><a href="equipo.html"><span class="icon-users"></span> Equipo</a></li>
+            <li><a id="Contacto"  href="contacto.html"><span class="icon-mail"></span> Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+<br/>
+<article class="contenedor">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230187.38768541592!2d-100.30307885!3d25.648812600000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86629531b437f8f5%3A0xa3d3d3ca6ac89894!2sMonterrey%2C+NL!5e0!3m2!1ses-419!2smx!4v1406494854667" width="100%" height="350" frameborder="0" style="border:0"></iframe>
+    <h1>Formulario de contacto</h1>
+    <section class="sectiontexto2">
+        Usted puede utilizar el siguiente formulario para contactar con nosotros.
+        <br/> <br/>
+        <form id="conta" action="http://www.azulweb.net/enviar.php" method="post" name="contacto"><label><span class="icon-user"></span> Nombre:
+        <input id="nombre" title=" Es necesario colocar tu nombre para poder darte un mejor servicio" name="nombre" required=""  type="text" placeholder="Escriba aquí tu nombre" /><br/> <br/>
+        </label><label><span class="icon-network"></span> Empresa:
+        <input id="empresa" name="empresa"  type="text" placeholder="Escriba aquí el nombre de su empresa o institución que representa" /><br/> <br/>
+        </label><label><span class="icon-mail"></span> Mail:
+        <input id="mail" name="mail" required=""  type="email" placeholder="Escriba aquí su correo" /><br/> <br/>
+        </label><label><span class="icon-cog"></span> Motivo de contacto:</label><br/> <br/>
+        <select name="lista"><option selected="selected" value="0">Elige una opción</option>
+        <option value="Duda">Duda</option>
+        <option value="Sugerencia">Sugerencia</option>
+        <option value="Cursos">Cursos</option>
+        <option value="Comprar curso">Comprar curso</option>
+        <option value="Publicidad">Publicidad</option>
+        <option value="Reportar fallos">Reportar fallos</option></select>
+        <br/> <br/>
+        <label><span class="icon-new"></span> En necesario colocar el código de la imagen para enviar el mensaje</label><br/>
+        <img src="http://www.azulweb.net/programas/captcha.php" alt="captcha" />
+        <input title="En necesario colocar el código de la imagen para enviar el mensaje" name="captcha" required="" size="40%" type="text" placeholder="Escriba el codigo" />
+        <br/> <br/>
+        <label><span class="icon-pencil"></span> Mensaje:</label>
+        <textarea id="mensaje"  name="mensaje" required="" rows="8" placeholder="Escriba aquí"></textarea>
+        <br/>  <br/>
+        <input id="submit" name="submit" type="submit" value="Enviar" />
+    </section> 
+</article>
+<br/>
+<!--Pie de pagina-->
+<footer>
+    <a href="http://www.azulweb.net/" title="Azul Web"><img id="logopie" src="img/logo-pie.png" alt="logopie"/></a>
+    <aside id="asideredes">
+            <a href="https://twitter.com/Angeel_Sancheez" title="Twitter"><span class="icon-twitter"></span> Angel Sanchez</a><br/>
+            <a href="mailto:agelsanchez@azulweb.net" title="Twitter"><span class="icon-mail"></span> agelsanchez@azulweb.net</a>
+        </aside>
+</footer>    
+<!--Pie de pagina-->
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script>
+    $(function() {
+
+        var btn_movil = $('#nav-mobile'),
+            menu = $('#menu').find('ul');
+
+        // Al dar click agregar/quitar clases que permiten el despliegue del menú
+        btn_movil.on('click', function (e) {
+            e.preventDefault();
+
+            var el = $(this);
+
+            el.toggleClass('nav-active');
+            menu.toggleClass('open-menu');
+        })
+
+    });
+</script>
+</body>
+</html>

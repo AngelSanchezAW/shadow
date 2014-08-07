@@ -1,0 +1,104 @@
+@media only screen and (max-width: 900px) {
+    /* mostramos #nav-mobile */
+    #nav-mobile{ 
+        display: block; 
+    }
+    /* Fijamos nuestro nav en 100% ancho y dejamos de flotarlo  */
+    #menu{
+        width: 100%;
+        float: none;
+        padding-top: 60px;
+    }
+    /* Convertimos nuestra lista de enlaces en un menú horizontal */
+    #menu ul{
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.5);
+        -moz-box-shadow: 0 1px 2px rgba(0,0,0,.5);
+        box-shadow: 0 1px 2px rgba(0,0,0,.5);
+        max-height: 0;
+        overflow: hidden;
+    }
+    /* estilos para los LI del menu */
+    #menu li{
+        background: #33363b;
+        border-bottom: 1px solid #282b30;
+        float: none;
+    }
+
+    /* Quitamos el borde del ultimo item del menú */
+    #menu li:last-child{ border-bottom: 0;}
+    #menu li a{
+        padding: 15px 0;
+        height: auto;
+        line-height: normal;
+    }
+    
+    #menu li a:hover{
+        background:#2a2d33
+    }
+
+    /* Agregamos una animación al despligue del menú */
+    #menu ul.open-menu{
+        max-height: 400px;
+        -webkit-transition: max-height .4s;
+        -moz-transition: max-height .4s;
+        -ms-transition: max-height .4s;
+        -o-transition: max-height .4s;
+        transition: max-height .4s;
+    }
+
+    .slidesjs-container{
+        height: 200px;
+    }
+
+    #tituloslider h2 span {
+        padding: 5px; 
+    } 
+
+
+    #menu li{
+        opacity: .95;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    #sectionfacebook, #sectiontwitter, #sectionyoutube{
+        margin-top: 10px;
+        width: 30%; 
+        display: inline-block; 
+    }
+}    
+
+@media only screen and (max-width: 700px) {
+    #asideredes, #sidebar{
+        display: none;
+    }
+
+    .sectiontexto{
+        width: 96%;
+    }
+
+    #contenido{
+        width: 96%;
+    }
+
+    .sectionvideo{
+        width: 96%;
+    }
+
+    .contenedor{
+        width: 96%;
+    }
+
+    .main{
+        width: 96%;
+    }
+
+    header{
+        width: 96%;
+    }
+
+    footer{
+        width: 96%;
+    }
+}    
+

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Shadow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type='text/css' href="fonts/style.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/style-movil.css">
+    <link rel="shortcut icon" href="http://www.azulweb.net/wp-content/uploads/2014/02/icono-2.png" />
+    <!--Estilo para mostrar activado el menu segun en la apgina que estemos-->
+    <style>
+    #inicio{
+                background: #151a1e;
+                color: #2E9AFE;
+                box-shadow: 0px 0px 5px #888888;
+            }
+    </style>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51ad47f56eea538f">
+    </script>
+</head>
+<body>
+<!--Header, donde esta el logo y el menu-->    
+<header>
+    <a href="index.html" id="logo">Logo</a>
+    <nav id="menu">
+        <a href="#" class="nav-mobile" id="nav-mobile"></a>
+        <ul>
+            <li><a id="inicio" href="index.html"><span class="icon-house"></span> Inicio</a></li>
+            <li><a href="azul-web.html"><span class="icon-network"></span> Azul Web</a></li>
+            <li><a href="contenido.html"><span class="icon-graduation"></span> Contenido</a></li>
+            <li><a href="equipo.html"><span class="icon-users"></span> Equipo</a></li>
+            <li><a href="contacto.html"><span class="icon-mail"></span> Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+<!--Header, donde esta el logo y el menu-->
+<!--Slider-->
+<div class="main">
+    <div class="slides">
+        <div  class="tituloslider">
+        <a href="#"><img src="img/slider1.png" alt="logo"></a>
+        <h2>CURSOS TOTALMENTE GRATIS</h2>
+        </div>
+        <div  class="tituloslider">  
+        <a href="#"><img src="img/slider2.png" alt=""></a>
+        <h2>TUTORIALES SOBRE DIFERENTES TEMAS</h2>
+        </div>
+        <div  class="tituloslider">
+        <a href="#"><img src="img/slider3.png" alt=""></a>
+        <h2>BLOG SOBRE NOTICIAS INTERESANTES</h2>
+        </div>
+    </div>
+</div>
+<!--Slider-->
+<!--Contenedor-->
+<article class="contenedor">
+    <br/>
+    <h1>Azul Web - Cursos, Tutorials y Blog</h1>
+    <section class="sectionvideo">
+       <video poster="img/imgportada.png" autoplay loop="loop" preload="auto">
+            <source src="video/azulweb.mp4" type="video/mp4">
+            <source src="video/azulweb.ogg" type="video/ogg">
+            Tu navegador no soporta el video.
+       </video>
+    </section>
+    <section class="sectiontexto">
+        Azul Web es una plataforma web que fomenta la educación autodidacta brindando cursos y tutoriales que ayudan al desarrollo profesional de las personas.<br/><br/>
+        Azul Web fue desarrollada con la esperanza de mostrar a los jóvenes del mañana que el conocimiento siempre ha estado disponible y que existen personas dispuestas a compartir sus habilidades con los demás.<br/><br/>
+        En Azul Web entendemos que el conocimiento recolectado en nuestros estudios es bueno pero también sabemos que es solo un porcentaje pequeño de lo que realmente podemos aprender y que si no estamos totalmente preparados será más complicado la integración dentro de una empresa. 
+    </section> 
+</article>
+<!--Contenedor-->
+<br/>
+<!--Pie de pagina-->
+<footer>
+    <a href="http://www.azulweb.net/" title="Azul Web"><img id="logopie" src="img/logo-pie.png" alt="logofooter"/></a>
+    <aside id="asideredes">
+            <a href="https://twitter.com/Angeel_Sancheez" title="Twitter"><span class="icon-twitter"></span> Angel Sanchez</a><br/>
+            <a href="mailto:agelsanchez@azulweb.net" title="Twitter"><span class="icon-mail"></span> agelsanchez@azulweb.net</a>
+        </aside>
+</footer>    
+<!--Pie de pagina-->
+<!--script para que funcione el menu-->
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script>
+    $(function() {
+
+        var btn_movil = $('#nav-mobile'),
+            menu = $('#menu').find('ul');
+
+        // Al dar click agregar/quitar clases que permiten el despliegue del menú
+        btn_movil.on('click', function (e) {
+            e.preventDefault();
+
+            var el = $(this);
+
+            el.toggleClass('nav-active');
+            menu.toggleClass('open-menu');
+        })
+
+    });
+</script>
+<!--script para que funcione el menu-->
+<!--script para que funcione el slider-->
+<script src="js/jquery.slides.js"></script>
+<script>
+
+    $(function(){
+  $(".slides").slidesjs({
+     
+    play: {
+      active: true,
+        // [boolean] Generate the play and stop buttons.
+        // You cannot use your own buttons. Sorry.
+      effect: "slide",
+        // [string] Can be either "slide" or "fade".
+      interval: 3000,
+        // [number] Time spent on each slide in milliseconds.
+      auto: true,
+        // [boolean] Start playing the slideshow on load.
+      swap: true,
+        // [boolean] show/hide stop and play buttons
+      pauseOnHover: true,
+        // [boolean] pause a playing slideshow on hover
+      restartDelay: 2500
+        // [number] restart delay on inactive slideshow
+    }
+  });
+});
+    </script>
+<!--script para que funcione el slider-->    
+</body>
+</html>
